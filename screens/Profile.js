@@ -11,10 +11,8 @@ function ProfileScreen() {
     const [userNameLetter, setUserNameLetter] = useState('H');
     useEffect(() => {
         getDetail().then(val => {
-            console.log("loginData profile- ",val);
             if(!isEmptyValue(val)){
                 if(val){
-                    console.log('val name-- ',JSON.parse(val).name);
                     setUserPrefData(JSON.parse(val));
                     setUserNameLetter((JSON.parse(val).name).charAt(0));
                 }else{
@@ -39,7 +37,7 @@ function ProfileScreen() {
           });
     }
     function changePassword(){
-        
+        RootNavigation.navigate('ChangePasswordScreen');
     }
     return (
         <View style={profileStyle.container}>

@@ -75,8 +75,6 @@ export const getBloodDonationHistory = async (historyObj) => {
 };
 export const userRegistrationService = async (regObj) => {
     let url = APP_CONSTANT.baseUrl + APP_CONSTANT.apiuserRegistration; 
-    console.log("url:",url);
-    console.log("regObj:",regObj);
     await axios
         .post(url, regObj)
         .then(function (response) {
@@ -100,8 +98,6 @@ export const userRegistrationService = async (regObj) => {
 };
 export const updateDonorService = async (regObj) => {
     let url = APP_CONSTANT.baseUrl + APP_CONSTANT.apiupdateDonor; 
-    console.log("url:",url);
-    console.log("updObj:",regObj);
     await axios
         .post(url, regObj)
         .then(function (response) {
@@ -126,8 +122,6 @@ export const updateDonorService = async (regObj) => {
 
 export const bloodRequestService = async (reqObj) => {
     let url = APP_CONSTANT.baseUrl + APP_CONSTANT.apibloodRequest; 
-    console.log("url:",url);
-    console.log("reqObj:",reqObj);
     await axios
         .post(url, reqObj)
         .then(function (response) {

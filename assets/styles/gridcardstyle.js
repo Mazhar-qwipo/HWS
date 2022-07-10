@@ -2,12 +2,19 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 export const gridCardStyle = StyleSheet.create({
     homeGrid: {
         flex: 1,
+        flexDirection: 'column',
+        width: '100%',
+        alignItems: 'center',
+    },
+    bloodDonationGrid: {
+        flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
     },
+    
     item: {
         width: 135,
         height: 130,
@@ -44,8 +51,8 @@ export const gridCardStyle = StyleSheet.create({
     },
     textDescription: {
         color: '#3b3b3b',
-        fontWeight: '400',
-        fontSize: 10,
+        fontWeight: '700',
+        fontSize: 12,
         textAlign: 'center'
     }
 })

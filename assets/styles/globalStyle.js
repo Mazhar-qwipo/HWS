@@ -20,7 +20,7 @@ export const globalStyle = StyleSheet.create({
     },
     heading1: {
         color: '#FFF',
-        fontWeight: '500',
+        fontWeight: '700',
         fontSize: 20,
         textAlign: 'center'
     },

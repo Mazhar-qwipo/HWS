@@ -12,8 +12,8 @@ function SplashScreen({ navigation }) {
                 style={splashStyle.splashImage}
                 source={require('../assets/img/splashscreenLogo.png')}
             />
-            <Text style={splashStyle.splashHeading1}>HUSAINI</Text>
-            <Text style={splashStyle.splashHeading2}>WELFARE SOCITY</Text>
+            {/* <Text style={splashStyle.splashHeading1}>HUSAINI</Text> */}
+            <Text style={splashStyle.splashHeading2}>HUSAINI BLOOD DONATION CLUB</Text>
         </View>
     )
 }

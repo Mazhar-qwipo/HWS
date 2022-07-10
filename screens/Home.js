@@ -13,23 +13,49 @@ export default function HomeScreen() {
     return (
         <View style={globalStyle.container}>
             <View style={globalStyle.headingContainer}>
-                <Text style={globalStyle.heading1}>HUSAINI WELFARE SOCITY</Text>
+                <Text style={globalStyle.heading1}>HUSAINI BLOOD DONATION CLUB</Text>
             </View>
             <View style={gridCardStyle.homeGrid}>
-                <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', {pageName: 'HAS'})}>
+                <TouchableOpacity onPress={() => RootNavigation.navigate('SignInScreen')}>
                     <View style={gridCardStyle.item}>
                         <Image
                             style={gridCardStyle.image}
                             resizeMode="contain"
-                            source={require('../assets/img/HAS-R.png')}
+                            source={require('../assets/img/HBDC-R.png')}
                         />
                         <View style={gridCardStyle.textView}>
-                            <Text style={gridCardStyle.text}>HAS</Text>
-                            <Text style={gridCardStyle.textDescription}>HUSAINI AMBULANCE SERVICE</Text>
+                            <Text style={gridCardStyle.text}>HBDC</Text>
+                            <Text style={gridCardStyle.textDescription}>REGISTRATION</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', {pageName: 'HVTC'})}>
+                <TouchableOpacity onPress={() => RootNavigation.navigate('BloodRequestScreen')}>
+                    <View style={gridCardStyle.item}>
+                        <Image
+                            style={gridCardStyle.image}
+                            resizeMode="contain"
+                            source={require('../assets/img/BLOODBANKS.png')}
+                        />
+                        <View style={gridCardStyle.textView}>
+                            <Text style={gridCardStyle.text}>HBDC</Text>
+                            <Text style={gridCardStyle.textDescription}>BLOOD REQUEST</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => RootNavigation.navigate('MoreServicesScreen')}>
+                    <View style={gridCardStyle.item}>
+                        <Image
+                            style={gridCardStyle.image}
+                            resizeMode="contain"
+                            source={require('../assets/img/HVCT-R.png')}
+                        />
+                        <View style={gridCardStyle.textView}>
+                            <Text style={gridCardStyle.text}>MORE SERVICES</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                {/* <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', { pageName: 'HVTC' })}>
                     <View style={gridCardStyle.item}>
                         <Image
                             style={gridCardStyle.image}
@@ -42,18 +68,18 @@ export default function HomeScreen() {
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', {pageName: 'KTF'})}>
-                <View style={gridCardStyle.item}>
-                    <Image
-                        style={gridCardStyle.image}
-                        resizeMode="contain"
-                        source={require('../assets/img/KTF-R.png')}
-                    />
-                    <View style={gridCardStyle.textView}>
-                        <Text style={gridCardStyle.text}>KTF</Text>
-                        <Text style={gridCardStyle.textDescription}>KHADIJAH TRADE FARE</Text>
+                <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', { pageName: 'KTF' })}>
+                    <View style={gridCardStyle.item}>
+                        <Image
+                            style={gridCardStyle.image}
+                            resizeMode="contain"
+                            source={require('../assets/img/KTF-R.png')}
+                        />
+                        <View style={gridCardStyle.textView}>
+                            <Text style={gridCardStyle.text}>KTF</Text>
+                            <Text style={gridCardStyle.textDescription}>KHADIJAH TRADE FARE</Text>
+                        </View>
                     </View>
-                </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => RootNavigation.navigate('SignInScreen')}>
                     <View style={gridCardStyle.item}>
@@ -67,7 +93,7 @@ export default function HomeScreen() {
                             <Text style={gridCardStyle.textDescription}>BLOOD DONAION</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
 
         </View>

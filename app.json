@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/hwslogo.png",
     "splash": {
-      "image": "./assets/hwslogo.png",
+      "image": "./assets/img/splashscreenLogo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#b00305"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

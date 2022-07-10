@@ -6,6 +6,6 @@ export function navigate(name, params) {
   if (navigationRef.isReady()) {
     navigationRef.navigate(name, params);
     //navigationRef.navigate('App', { screen: name }, params);
-    console.log("test");
+    //console.log("test");
   }
 }

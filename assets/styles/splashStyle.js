@@ -8,8 +8,8 @@ export const splashStyle = StyleSheet.create({
         alignItems: 'center',
     },
     splashImage: {
-        height: 170,
-        width: 170,
+        height: 215,
+        width: 235,
     },
     splashHeading1: {
         fontSize: 60,
@@ -17,8 +17,9 @@ export const splashStyle = StyleSheet.create({
         color: '#FFF',
     },
     splashHeading2: {
-        fontSize: 28,
-        fontWeight: '500',
+        paddingTop:20,
+        fontSize: 20,
+        fontWeight: '700',
         color: '#FFF',
     }
 })

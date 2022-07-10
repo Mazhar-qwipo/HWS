@@ -187,7 +187,7 @@ function BloodRequestScreen() {
     }
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.sideView}><Text style={globalStyle.heading2}>Create Your Account</Text></View>
+            <View style={styles.sideView}><Text style={globalStyle.heading2}>Blood Request</Text></View>
             <ScrollView>
                 {!isFirstStepComplete ? (
                     <View style={[styles.centerView, { marginTop: 5, marginBottom: 160 }]}>

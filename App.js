@@ -16,6 +16,10 @@ import BloodBankScreen from './screens/bloodBank';
 import BloodDonationDashboardScreen from './screens/BloodDonationDashboard';
 import CoordinatorsScreen from './screens/coordinators';
 import BloodDonationHistoryScreen from './screens/bloodDonationHistory';
+import BloodRequestScreen from './screens/BloodRequest';
+import MoreServicesScreen from './screens/MoreServices';
+import NotificationScreen from './screens/Notification';
+import ChangePasswordScreen from './screens/ChangePassword';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -60,6 +64,10 @@ export default function App() {
           <Stack.Screen name="CoordinatorsScreen" component={CoordinatorsScreen} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
           <Stack.Screen name="BloodDonationHistoryScreen" component={BloodDonationHistoryScreen} />
+          <Stack.Screen name="BloodRequestScreen" component={BloodRequestScreen} />
+          <Stack.Screen name="MoreServicesScreen" component={MoreServicesScreen} />
+          <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
+          <Stack.Screen name="ChangePasswordScreen" component={ChangePasswordScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </GlobalStateStore>

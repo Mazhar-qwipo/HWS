@@ -4,7 +4,7 @@ export const COLORS = {
     blackD: '#ddd',
     blackC: '#ccc',
     blackLight: '#4d4d4d',
-    themeColor:'#eb4242',
+    themeColor:'#b00305',
     placeholderColor:'#333',
     selectionColor:'#333',
     linkWhite:'#fff',

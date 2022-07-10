@@ -1,19 +1,20 @@
 export const APP_CONSTANT = {
-    baseUrl: 'https://xyz.com',
+    baseUrl: 'https://hbd.capitalgoindia.com',
     keySharesPref: 'userData',
-    apigetpage: "/api/",
-    apicoordinatorList: "/api//",
-    apibloodbankList: "/api/",
-    apilogin: "/api/",
-    apiuserProfile: "/api/",
-    apidonorDetail: "/api/",
-    apiblooddonationhistory: "/api/",
-    apistateList: "/api/",
-    apicityList: "/api/",
-    apiNewsList: "/api/",
-    apiuserRegistration: "/api/",
-    apibloodRequest: "/api/",
-    apiupdateDonor: "/api/",
+    apigetpage: "/api/getpage/",
+    apicoordinatorList: "/api/coordinator-list/",
+    apibloodbankList: "/api/bloodbank-list",
+    apilogin: "/api/login",
+    apiuserProfile: "/api/user-profile",
+    apidonorDetail: "/api/donor-detail",
+    apiblooddonationhistory: "/api/blooddonationhistory",
+    apistateList: "/api/state-list",
+    apicityList: "/api/city-list/",
+    apiNewsList: "/api/newslist",
+    apiuserRegistration: "/api/user-registration",
+    apibloodRequest: "/api/blood-request",
+    apiupdateDonor: "/api/update-donor",
+    changePpassowrd: "/api/change-passowrd",
 
     dummyList: [
         {
@@ -105,5 +106,16 @@ export const APP_CONSTANT = {
             status: 1,
             updated_at: "2021-01-01 23:01:48",
         }
-    ]
+    ],
+    howToDone: [
+        {
+            key: '0', value: 'How To Done'
+        },
+        {
+            key: 'Self', value: 'Self'
+        },
+        {
+            key: 'Camp', value: 'Camp'
+        }
+    ],
 }

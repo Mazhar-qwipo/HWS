@@ -8,7 +8,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DefaultTheme } from 'react-native-paper';
 import { globalStyle } from '../assets/styles/globalStyle';
-import { navigationRef } from '../RootNavigation';
+import * as RootNavigation from '../RootNavigation';
+import {getDetail} from '../services/sharedPref';
+import { isEmptyValue } from '../services/commonServices';
 const Tab = createMaterialBottomTabNavigator();
 
 export default function DashboardHomeScreen() {
@@ -43,7 +45,25 @@ export default function DashboardHomeScreen() {
                             <MaterialCommunityIcons name="account-circle" color={color}
                                 size={26} />
                         ),
-                    }} />
+                    }} 
+                    listeners={{
+                        tabPress: e => {
+                            getDetail().then(val => {
+                                if(!isEmptyValue(val)){
+                                    if(val){
+                                        RootNavigation.navigate('ProfileScreen');
+                                    }else{
+                                        RootNavigation.navigate('SignInScreen');
+                                    }
+                                }else{
+                                    RootNavigation.navigate('SignInScreen');
+                                }
+                              }).catch(err=>{
+                                console.log('val error-- ',err);
+                              });
+                        },
+                      }}
+                    />
             </Tab.Navigator>
             
         </NavigationContainer>

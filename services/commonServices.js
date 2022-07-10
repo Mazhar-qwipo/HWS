@@ -73,8 +73,7 @@ export const newsListService = async () => {
 };
 
 export const isEmptyValue = (data) =>
-    (data == null || data == '' || data == '0' || data == 0 || data == undefined) ? true : false
-    ;
+    (data == null || data == '' || data == '0' || data == 0 || data == undefined) ? true : false;
 
 export const validateEmail = (email) => {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

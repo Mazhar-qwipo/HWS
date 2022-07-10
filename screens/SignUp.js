@@ -14,7 +14,7 @@ import * as RootNavigation from '../RootNavigation';
 
 function SignUpScreen({ navigation: { navigate } }) {
     const [state, setState] = useContext(Context);
-    const [isRegister, setRegister] = useState();
+    const [isRegister, setRegister] = useState(true);
     const [stateList, setStateList] = useState(APP_CONSTANT.selectState);
     const [cityList, setCityList] = useState(APP_CONSTANT.selectCity);
 
@@ -36,6 +36,7 @@ function SignUpScreen({ navigation: { navigate } }) {
     const [office_address, setOfficeAddress] = useState("");
     const [designation, setDesignation] = useState("");
     const [other_details, setOtherDetails] = useState("");
+    const [how_to_done, setHowToDone] = useState("");
 
     async function getStateListFn() {
         setState({ isLoading: true });
@@ -105,6 +106,7 @@ function SignUpScreen({ navigation: { navigate } }) {
         setRegister(false);
     }
     async function onClickRegister() {
+
         if (isEmptyValue(blood_group_id)) {
             Alert.alert("Please select Blood group!");
             return;
@@ -129,14 +131,16 @@ function SignUpScreen({ navigation: { navigate } }) {
             Alert.alert("Please enter Business/Job!");
             return;
         }
-
-        console.log("inputValue", { blood_group_id, marital_status, father_husband_name, age, address, education, experiance, business_job, office_address, designation, other_details });
-
+        if (isEmptyValue(how_to_done) || how_to_done=="0") {
+            setHowToDone(APP_CONSTANT.howToDone[APP_CONSTANT.howToDone.length-1].value);
+            
+        }
+        
         setState({ isLoading: true });
         let regData = await userRegistrationService({ name, email, contact, gender, password, stateid, cityid });
         setState({ isLoading: false });
         if (regData.status == 200 && !isEmptyValue(regData.data)) {
-            let updateRegData = await updateDonorService({ userId:regData.data.id,stateid,cityid,name,blood_group_id, marital_status, father_husband_name, age, address, education, experiance, business_job, office_address, designation, other_details });
+            let updateRegData = await updateDonorService({ userId:regData.data.id,stateid,cityid,name,blood_group_id, marital_status, father_husband_name, age, address, education, experiance, business_job, office_address, designation, other_details,how_to_done });
             setState({ isLoading: false });
             if (updateRegData.status == 200 && !isEmptyValue(updateRegData.data)) {
                 Alert.alert("Registration Successfull!");
@@ -406,6 +410,27 @@ function SignUpScreen({ navigation: { navigate } }) {
                             }
                             maxLength={250}
                         />
+                        <View style={globalStyle.inputSelectWraper}>
+                            <Picker
+                                itemStyle={globalStyle.inputSelectItem}
+                                mode="dropdown"
+                                style={globalStyle.inputSelect}
+                                selectedValue={how_to_done}
+                                onValueChange={(itemValue, itemIndex) => {
+                                    setHowToDone(itemValue);
+                                    console.log("itemValue- ",itemValue);
+                                }}
+                            >
+                                {APP_CONSTANT.howToDone.map((item, index) => (
+                                    <Picker.Item
+                                        label={item.value}
+                                        value={item.key}
+                                        index={index}
+                                        key={index}
+                                    />
+                                ))}
+                            </Picker>
+                        </View>
                         <View style={[globalStyle.marginBottom1, globalStyle.row]}>
                             <TouchableOpacity style={[globalStyle.btnBlack, globalStyle.btnMediun]} onPress={() => onClickBack()}>
                                 <Text style={globalStyle.btnText}>Back</Text>

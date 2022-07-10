@@ -13,7 +13,7 @@ export default function BloodDonationDashboardScreen() {
             <View style={globalStyle.headingContainer}>
                 <Text style={globalStyle.heading1}>HUSAINI WELFARE SOCITY</Text>
             </View>
-            <View style={gridCardStyle.homeGrid}>
+            <View style={gridCardStyle.bloodDonationGrid}>
                 <TouchableOpacity onPress={() => RootNavigation.navigate('BloodBankScreen', { pageName: 'BB' })}>
                     <View style={gridCardStyle.item}>
                         <Image
@@ -27,7 +27,7 @@ export default function BloodDonationDashboardScreen() {
                         </View>
                     </View>
                 </TouchableOpacity>
-                {/* <TouchableOpacity onPress={() => RootNavigation.navigate('PageDynamicScreen', {pageName: 'HVTC'})}>
+                <TouchableOpacity onPress={() => RootNavigation.navigate('NotificationScreen')}>
                     <View style={gridCardStyle.item}>
                         <Image
                             style={gridCardStyle.image}
@@ -38,7 +38,7 @@ export default function BloodDonationDashboardScreen() {
                             <Text style={gridCardStyle.text}>BLOOD CAMPS</Text>
                         </View>
                     </View>
-                </TouchableOpacity> */}
+                </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => RootNavigation.navigate('CoordinatorsScreen', { pageName: 'CO' })}>
                     <View style={gridCardStyle.item}>
@@ -64,7 +64,7 @@ export default function BloodDonationDashboardScreen() {
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => RootNavigation.navigate('ProfileScreen', { pageName: 'Profile' })}>
+                {/* <TouchableOpacity onPress={() => RootNavigation.navigate('ProfileScreen', { pageName: 'Profile' })}>
                     <View style={gridCardStyle.item}>
                         <Image
                             style={gridCardStyle.image}
@@ -75,7 +75,7 @@ export default function BloodDonationDashboardScreen() {
                             <Text style={gridCardStyle.text}>PROFILE</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
 
         </View>
