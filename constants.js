@@ -1,5 +1,5 @@
 export const APP_CONSTANT = {
-    baseUrl: 'https://hbd.capitalgoindia.com',
+    baseUrl: 'https://hbd.husainiwelfare.org',
     keySharesPref: 'userData',
     apigetpage: "/api/getpage/",
     apicoordinatorList: "/api/coordinator-list/",

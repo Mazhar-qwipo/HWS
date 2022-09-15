@@ -14,7 +14,7 @@ import * as RootNavigation from '../RootNavigation';
 
 function SignUpScreen({ navigation: { navigate } }) {
     const [state, setState] = useContext(Context);
-    const [isRegister, setRegister] = useState(true);
+    const [isRegister, setRegister] = useState();
     const [stateList, setStateList] = useState(APP_CONSTANT.selectState);
     const [cityList, setCityList] = useState(APP_CONSTANT.selectCity);
 
