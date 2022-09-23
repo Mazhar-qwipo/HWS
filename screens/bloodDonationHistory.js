@@ -39,7 +39,7 @@ function BloodDonationHistoryScreen({ navigation: { navigate }, route: { params 
             console.log("history data- ",listData.data);
             setDonationHistory(listData.data);
         } else {
-            Alert.alert(listData.message);
+            Alert.alert("Data Not Avilable!");
         }
     }
 

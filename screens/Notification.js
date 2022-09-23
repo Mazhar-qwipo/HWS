@@ -18,7 +18,7 @@ function NotificationScreen() {
         if (listData.status == 200 && listData.data.length > 0) {
             setNewsList(listData.data);
         } else {
-            Alert.alert(listData.message);
+            Alert.alert("Notification Not Found!");
         }
     }
     return (

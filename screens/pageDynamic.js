@@ -29,7 +29,7 @@ function PageDynamicScreen({ navigation: { navigate }, route: { params } }) {
             setPageDetail(page.data[0]);
             //console.log(APP_CONSTANT.baseUrl + '/assets/uploads/' + page.data[0].page_image);
         } else {
-            Alert.alert(page.message);
+            Alert.alert("Data Not Available!");
         }
     }
     function ImageIcon(props) {

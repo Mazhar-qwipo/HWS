@@ -32,15 +32,14 @@ function SignInScreen({ navigation: { navigate } }) {
         setState({ isLoading: true });
         let lr = await login({ "email": username, password });
         setState({ isLoading: false });
-        console.log("lr-", lr.data[0]);
+        console.log("lr-", lr);
         if (lr.status == 200 && lr.data.length > 0) {
             setDetail(lr.data[0]);
             RootNavigation.navigate('BloodDonationDashboardScreen');
         } else {
-            Alert.alert(lr.message);
+            Alert.alert("Wrong Email Or Password!");
         }
 
-        console.log("isSetUserDetail- ", isSetUserDetail());
     }
     return (
         <SafeAreaView style={styles.container}>

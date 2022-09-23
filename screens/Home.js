@@ -1,11 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, Alert } from 'react-native'
+import { View, Text, StyleSheet, Image, Alert,TouchableOpacity } from 'react-native'
 import { gridCardStyle } from '../assets/styles/gridcardstyle.js'
 import { globalStyle } from '../assets/styles/globalStyle.js'
 import { navigationRef } from '../RootNavigation';
 import * as RootNavigation from '../RootNavigation';
 import { Button } from 'react-native-paper';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function HomeScreen() {
     const link = '../assets/favicon.png';
 
@@ -16,7 +15,9 @@ export default function HomeScreen() {
                 <Text style={globalStyle.heading1}>HUSAINI BLOOD DONATION CLUB</Text>
             </View>
             <View style={gridCardStyle.homeGrid}>
-                <TouchableOpacity onPress={() => RootNavigation.navigate('SignInScreen')}>
+                <TouchableOpacity onPress={() => {
+                    RootNavigation.navigate('SignInScreen')
+                }}>
                     <View style={gridCardStyle.item}>
                         <Image
                             style={gridCardStyle.image}

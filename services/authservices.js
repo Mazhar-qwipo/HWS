@@ -10,6 +10,7 @@ const login = async (loginObj) => {
     await axios
         .post(url, loginObj)
         .then(function (response) {
+            console.log("response---- ",response);
             if (response.status == 200) {
                 commonResponse.data = response.data;
                 commonResponse.status = response.status;
@@ -24,8 +25,6 @@ const login = async (loginObj) => {
             commonResponse.data = [];
             commonResponse.status = 404;
             commonResponse.message = error;
-            console.log("login url- ",url);
-            console.log("login data- ",loginObj);
             console.log("login error- ",error);
         });
     return commonResponse;

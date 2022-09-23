@@ -1,17 +1,16 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, Alert } from 'react-native'
+import { View, Text, StyleSheet, Image, Alert,TouchableOpacity } from 'react-native'
 import { gridCardStyle } from '../assets/styles/gridcardstyle.js'
 import { globalStyle } from '../assets/styles/globalStyle.js'
 import { navigationRef } from '../RootNavigation';
 import * as RootNavigation from '../RootNavigation';
 import { Button } from 'react-native-paper';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function BloodDonationDashboardScreen() {
 
     return (
         <View style={globalStyle.container}>
             <View style={globalStyle.headingContainer}>
-                <Text style={globalStyle.heading1}>HUSAINI WELFARE SOCITY</Text>
+                <Text style={globalStyle.heading1}>HUSAINI BLOOD DONATION CLUB</Text>
             </View>
             <View style={gridCardStyle.bloodDonationGrid}>
                 <TouchableOpacity onPress={() => RootNavigation.navigate('BloodBankScreen', { pageName: 'BB' })}>
