@@ -46,7 +46,6 @@ export const APP_CONSTANT = {
         {
             key: "Unmarried", value: "Unmarried"
         }
-
     ],
     genders: [
         {
